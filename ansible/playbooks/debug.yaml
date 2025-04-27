@@ -1,0 +1,8 @@
+---
+- name: Debug Variables
+  hosts: windows
+  gather_facts: no
+  tasks:
+    - name: Print variables
+      debug:
+        msg: "Username: {{ ansible_user }}, Connection: {{ ansible_connection }}, Transport: {{ ansible_winrm_transport }}"
